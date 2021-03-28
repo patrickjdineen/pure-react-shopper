@@ -4,7 +4,20 @@ import Item from './Item';
 import './CartPage.css';
 
 function CartPage ({ items, onAddOne, onRemoveOne }){
+    
+    function getTotal(){
+        let total=0;
+        for (let i =0; i<items.length;i++){
+            total+= items[i].count * items[i].price
+        } return total
+    };
+    
+
     return(
+        items.length ===0 ? 
+        <div>You currently don't have any items in your cart</div>
+        :
+        <div> 
         <ul className='CartPage-items'>
             {items.map(item=>
                 <li key={item.id} className='CartPage-item'>
@@ -24,6 +37,9 @@ function CartPage ({ items, onAddOne, onRemoveOne }){
                 </li>
                 )}
         </ul>
+        <div className='Cart-total'>Your For Loop Total is...{getTotal(items)}</div>
+        <div classNAme='Cart-total'>Your reduce total is {items.reduce((sum, item) => sum+(item.price*item.count),0)}</div>
+        </div>
     );
 }
 

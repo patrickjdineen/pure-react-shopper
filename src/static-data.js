@@ -2,20 +2,20 @@ let items = [
     {
     id: 0,
     name: "Apple iPad",
-    description: "An iPad like no other. WiFi, 4G, lots of storage.",
-    price: 329.00
+    description: "An iPad like no other. WiFi + 5G.",
+    price: 329.99
     },
     {
     id: 1,
     name: "Apple iPad Pro",
     description: "Even more expensive than the regular iPad.",
-    price: 799.00
+    price: 799.99
     },
     {
     id: 2,
-    name: "Canon T7i",
-    description: "DSLR camera with lots of megapixels.",
-    price: 749.99
+    name: "FujiFilm X-T4",
+    description: "Mirrorless Camera with IBIS.",
+    price: 1149.99
     },
     {
     id: 3,

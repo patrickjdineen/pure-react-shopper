@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Nav = ({ activeTab, onTabChange }) => {
+const Nav = ({ items, activeTab, onTabChange }) => {
     const itemClass = tabName =>
     `App-nav-item ${activeTab === tabName ? 'selected' :'' }`;
 
@@ -13,7 +13,9 @@ const Nav = ({ activeTab, onTabChange }) => {
             <li className={itemClass('cart')}>
                 <button onClick={()=> onTabChange('cart')}>Cart</button>
             </li>
+            <span>Cart Summary Here{items.count}</span> 
         </ul>
+        
     </nav>
     );
 };

@@ -42,6 +42,7 @@ const App = () => {
       <Nav 
       activeTab={activeTab}
       onTabChange={setActiveTab}
+      cart={summarizeCart(cart)}
       />
       <main className='App-content'>
         <Content 
@@ -50,7 +51,6 @@ const App = () => {
         onRemoveItem={removeItem}
         cart={summarizeCart(cart)} />
       </main>
-      <div>{cart.length} items</div>
     </div>
     
   );
